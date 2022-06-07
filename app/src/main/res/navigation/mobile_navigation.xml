@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_menu">
+
+    <fragment
+        android:id="@+id/navigation_menu"
+        android:name="com.example.cofefuandroid.ui.menu.MenuFragment"
+        android:label="@string/title_menu"
+        tools:layout="@layout/fragment_menu_list" />
+
+    <fragment
+        android:id="@+id/navigation_cart"
+        android:name="com.example.cofefuandroid.ui.cart.ItemCartFragment"
+        android:label="@string/title_cart"
+        tools:layout="@layout/fragment_item_cart_list" />
+
+    <fragment
+        android:id="@+id/navigation_order"
+        android:name="com.example.cofefuandroid.ui.order.OrderFragment"
+        android:label="@string/title_order"
+        tools:layout="@layout/fragment_order_list" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.cofefuandroid.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+</navigation>
