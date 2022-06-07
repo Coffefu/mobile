@@ -57,7 +57,7 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
+            <com.example.cofefuandroid.location.CustomSpinner
                 android:id="@+id/spinner2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

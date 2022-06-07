@@ -4,20 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="8dp"
     tools:context=".location.LocationAdapter">
 
     <TextView
         android:id="@+id/name"
+        style="@style/TextBold.Primary"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/placement"
+        style="@style/Text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp" />
 
     <TextView
         android:id="@+id/date"
+        style="@style/Text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp" />
 </LinearLayout>
