@@ -5,58 +5,40 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.cofefuandroid.R
-import com.example.cofefuandroid.ui.menu.placeholder.PlaceholderContent
+import com.ahmadhamwi.tabsync.TabbedListMediator
+import com.example.cofefuandroid.databinding.FragmentMenuListBinding
+import com.example.cofefuandroid.location.Data.productsList
+import com.example.cofefuandroid.location.Data.productsList2
 
-/**
- * A fragment representing a list of Items.
- */
+
 class MenuFragment : Fragment() {
+    private lateinit var binding: FragmentMenuListBinding
 
-    private var columnCount = 1
+    val tabNames = arrayOf("Кофе", "Не кофе")
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_menu_list, container, false)
+    ): View {
+        binding = FragmentMenuListBinding.inflate(inflater, container, false)
+        val view = binding.root
+        val tabLayout = binding.tabLayout
+        val recyclerView = binding.productRecyclerView
 
-        // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = MyItemMenuRecyclerViewAdapter(PlaceholderContent.ITEMS)
-            }
+        for (category in tabNames) {
+            tabLayout.addTab(tabLayout.newTab().setText(category))
         }
+        val a = Category("Кофе", productsList)
+        val b = Category("Не кофе", productsList2)
+        val vvv = mutableListOf(a, b)
+        recyclerView.adapter = MenuCategoryRecyclerViewAdapter(context, vvv)
+        TabbedListMediator(recyclerView, tabLayout, vvv.indices.toList()).attach()
         return view
     }
 
-    companion object {
-
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
-
-        // TODO: Customize parameter initialization
-        @JvmStatic
-        fun newInstance(columnCount: Int) =
-            MenuFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
-                }
-            }
-    }
 }

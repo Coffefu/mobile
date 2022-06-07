@@ -1,12 +1,9 @@
 package com.example.cofefuandroid
 
-import android.graphics.PorterDuff
 import android.os.Bundle
-import android.widget.Spinner
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.cofefuandroid.databinding.ActivityMainBinding
-import com.example.cofefuandroid.location.CustomSpinner
 import com.example.cofefuandroid.location.Data.locationList
 import com.example.cofefuandroid.location.LocationAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -15,6 +12,7 @@ class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var locationadapter: LocationAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

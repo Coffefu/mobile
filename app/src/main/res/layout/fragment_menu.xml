@@ -1,27 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_margin="4dp"
+    android:background="@drawable/ic_launcher_background"
+    android:elevation="8dp"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/name_product"
+            style="@style/TextBold.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Американо с молоком"
+            android:textSize="18sp" />
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/price"
+            style="@style/Text.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="120/120/120" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/item_number"
+        android:id="@+id/discription"
+        style="@style/Text.Primary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
-
-    <TextView
-        android:id="@+id/content"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:text="пук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэкпук пэк"
+        android:textSize="12dp" />
 </LinearLayout>

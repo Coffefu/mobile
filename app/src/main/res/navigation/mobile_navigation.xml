@@ -11,22 +11,7 @@
         android:label="@string/title_menu"
         tools:layout="@layout/fragment_menu_list" />
 
-    <fragment
-        android:id="@+id/navigation_cart"
-        android:name="com.example.cofefuandroid.ui.cart.ItemCartFragment"
-        android:label="@string/title_cart"
-        tools:layout="@layout/fragment_item_cart_list" />
 
-    <fragment
-        android:id="@+id/navigation_order"
-        android:name="com.example.cofefuandroid.ui.order.OrderFragment"
-        android:label="@string/title_order"
-        tools:layout="@layout/fragment_order_list" />
-    <fragment
-        android:id="@+id/navigation_profile"
-        android:name="com.example.cofefuandroid.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
-        tools:layout="@layout/fragment_profile" />
 
 
 </navigation>

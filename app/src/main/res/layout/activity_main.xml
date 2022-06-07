@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/rounded_border"
         android:elevation="1dp"
         app:itemBackground="@drawable/check_menu"
