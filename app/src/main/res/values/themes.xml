@@ -46,4 +46,8 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/black</item>
     </style>
+
+    <style name="mychip">
+        <item name="android:textAlignment">center</item>
+    </style>
 </resources>

@@ -11,5 +11,6 @@
     <color name="gray">#F3F3F3</color>
     <color name="activeMenuItem">#4D6276</color>
     <color name="menuItem">#758CA3</color>
+    <color name="chip">#FF5722</color>
     <color name="turquoise">#00BCD4</color>
 </resources>

@@ -28,8 +28,8 @@ class MainActivity : BaseActivity() {
         navView.setupWithNavController(navController)
 
         val spinner_location_coffee = binding.spinner2
-
         locationadapter = LocationAdapter(this, locationList)
         spinner_location_coffee.adapter = locationadapter
+
     }
 }

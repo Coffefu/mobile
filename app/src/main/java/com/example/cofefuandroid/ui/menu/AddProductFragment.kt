@@ -1,4 +1,4 @@
-package com.example.cofefuandroid.ui.profile
+package com.example.cofefuandroid.ui.menu
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,14 +8,12 @@ import androidx.fragment.app.Fragment
 import com.example.cofefuandroid.R
 
 
-class ProfileFragment : Fragment() {
-
+class AddProductFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        return inflater.inflate(R.layout.fragment_add_product, container, false)
     }
-
 }

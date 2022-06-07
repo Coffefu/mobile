@@ -19,12 +19,11 @@
         style="@style/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp" />
+        android:paddingTop="4dp" />
 
     <TextView
         android:id="@+id/date"
         style="@style/Text"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="8dp" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
