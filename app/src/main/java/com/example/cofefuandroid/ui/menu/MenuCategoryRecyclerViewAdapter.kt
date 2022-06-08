@@ -30,16 +30,12 @@ class MenuCategoryRecyclerViewAdapter(
             MenuItemRecyclerViewAdapter(context, fragment, item.listOfItems)
         holder.recyclerView.adapter = adapter
         adapter.onItemClickItem = {
-
             val myFragment = AddProductFragment()
             val manager = (context as AppCompatActivity).supportFragmentManager.beginTransaction()
-            manager.add(R.id.nav_host_fragment_activity_main, myFragment)
+            manager.add(R.id.fragment_menu_main, myFragment)
             manager.addToBackStack(null)
             manager.commit()
-
-
         }
-
     }
 
     override fun getItemCount(): Int = values.size

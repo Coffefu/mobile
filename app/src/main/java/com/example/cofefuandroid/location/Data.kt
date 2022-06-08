@@ -29,7 +29,7 @@ object Data {
 
             for (i in 1..15) {
                 val dd = ProductData()
-                dd.setName("латте")
+                dd.setName("'латте'+'$i'")
                 dd.setType(0)
                 dd.setDescription("Это латтттеееее")
                 productsList.add(dd)

@@ -68,6 +68,10 @@ class ProductData : Serializable {
         return "120/150"
     }
 
+    fun getCurrentPrice(): String {
+        return "120" + " р"
+    }
+
 }
 
 @Entity(tableName = "variationsData_database")

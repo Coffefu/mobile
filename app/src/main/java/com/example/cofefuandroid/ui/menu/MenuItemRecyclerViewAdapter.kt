@@ -16,10 +16,6 @@ class MenuItemRecyclerViewAdapter(
 ) : RecyclerView.Adapter<MenuItemRecyclerViewAdapter.MyViewHolder>() {
     var onItemClickItem: ((ProductData) -> Unit)? = null
 
-    fun onClickItem() {
-
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = FragmentMenuBinding.inflate(LayoutInflater.from(context), parent, false)
         return MyViewHolder(itemView)
@@ -39,10 +35,6 @@ class MenuItemRecyclerViewAdapter(
         val nameProduct: TextView = binding.nameProduct
         val price: TextView = binding.price
         val discription: TextView = binding.discription
-
-        override fun toString(): String {
-            return super.toString() + " '" + nameProduct.text + "'"
-        }
 
         init {
             itemView.setOnClickListener {

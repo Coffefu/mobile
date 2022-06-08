@@ -17,11 +17,6 @@ class MenuFragment : Fragment() {
     val tabNames = arrayOf("Кофе", "Не кофе")
 
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,8 +36,6 @@ class MenuFragment : Fragment() {
         val adapter = MenuCategoryRecyclerViewAdapter(context, this, vvv)
         recyclerView.adapter = adapter
         TabbedListMediator(recyclerView, tabLayout, vvv.indices.toList(), true).attach()
-
-
 
         return view
     }

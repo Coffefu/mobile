@@ -26,10 +26,12 @@ class MainActivity : BaseActivity() {
         // menu should be considered as top level destinations.
 
         navView.setupWithNavController(navController)
+        navView.setOnClickListener {
 
+        }
         val spinner_location_coffee = binding.spinner2
         locationadapter = LocationAdapter(this, locationList)
         spinner_location_coffee.adapter = locationadapter
-
     }
+
 }
